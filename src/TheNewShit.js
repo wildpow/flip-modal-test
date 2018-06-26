@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
-import {Card, CardBack, CardFront } from './TheNewStyles';
+import {Card, CardBack, CardFront, Container } from './TheNewStyles';
 import Modal from './Modal';
+import styled from 'styled-components';
 
+const NewModal = styled(Modal)`
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 class NewShit extends Component {
   constructor() {
@@ -44,11 +55,11 @@ class NewShit extends Component {
       </Modal>
     ) : null
     return (
-      <div>
+      <Container>
         <h1>Click here to check out this way cool form</h1>
         <button onClick={this.handleShow}>Way cool form</button>
         {modal}
-      </div>
+      </Container>
     )
   }
 }

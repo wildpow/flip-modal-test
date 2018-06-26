@@ -1,9 +1,10 @@
 import styled, {css} from 'styled-components';
 
 export const Card = styled.article`
-  position: relative;
-  width: 100%;
-  min-height: 380px;
+  /* position: relative; */
+  /* width: 100%;
+  height: 100%; */
+  /* min-height: 360px; */
   cursor: pointer;
   perspective: 1000px;
   transition: all .25s ease-in-out;
@@ -23,15 +24,18 @@ export const Card = styled.article`
 `;
 
 const CardSide = css`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  /* width: 100%;
+  height: 100%; */
+  margin: auto;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   backface-visibility: hidden;
   transition: all .35s ease-in-out;
 `
@@ -47,4 +51,17 @@ export const CardBack = styled.div`
   text-align: center;
   background-color: red;
   transform: rotateY(-180deg);
+  
 `
+
+export const Container = styled.div`
+margin-left: auto;
+margin-right: auto;
+padding-left: 5px;
+padding-right: 5px;
+@media (min-width: 768px) { width: 750px; padding-left: 10px; padding-right: 10px; }
+@media (min-width: 992px) { width: 970px; padding-left: 5px; padding-right: 5px; }
+@media (min-width: 1200px) { width: 1170px; }
+@media (min-width: 1300px) { width: 1270px; }
+@media (min-width: 1400px) { width: 1370px; }
+`;

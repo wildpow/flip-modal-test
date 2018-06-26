@@ -1,8 +1,11 @@
 import React from 'react';
-import NewShit from './TheNewShit';
+// import NewShit from './TheNewShit';
+import CrazyCard from './NewerShit/TheOne';
+
 const App = () => (
   <div>
-    <NewShit/>
+    <CrazyCard/>
+    {/* <NewShit/> */}
   </div>
 )
 
