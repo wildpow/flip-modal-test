@@ -36,9 +36,9 @@ class NewShit extends Component {
             <h1>Tottally Cool form goes here. Once filled out click submit</h1>
             <button onClick={this.flipCard}>Submit</button>
           </CardFront>
-          <CardBack>
+          <CardBack onClick={this.handleHide}>
             <h1>Thank you for you for filling out this fake form. Peace be with you!</h1>
-            <button onClick={this.handleHide}>Close</button>
+            {/* <button onClick={this.handleHide}>Close</button> */}
           </CardBack>
         </Card>
       </Modal>
