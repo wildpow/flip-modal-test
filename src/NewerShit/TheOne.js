@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { CardContainer, Card, Front, Back } from './TheOneStyles';
+import { CardContainer, Card, Front, Back, Header } from './TheOneStyles';
 
 class CrazyCard extends Component {
   constructor() {
@@ -22,10 +22,16 @@ class CrazyCard extends Component {
       <CardContainer>
         <Card style={{transform: this.state.flip}}>
         <Front>
-          <h1>Poop</h1>
+          <Header>
+            <h3>Poop</h3>
+            <button onClick={this.handleHide}>close</button>
+          </Header>
         </Front>
         <Back>
-          <h1>fart</h1>
+          <Header>
+            <h3>PEEPS!!!</h3>
+            <button onClick={this.handleHide}>close</button>
+          </Header>
         </Back>
         </Card>
       </CardContainer>
